@@ -1,11 +1,11 @@
 #coding=utf8
 import re
-# from google.cloud import translate  
+from google.cloud import translate  
 import urllib.request
 import sys
-# translate_client = translate.Client()
+translate_client = translate.Client()
 
-# language = 'zh_CN'  #将要翻译的语言
+language = 'zh_CN'  #将要翻译的语言
 length = 4      #提选出小于此长度的单词
 
 input = open("words.txt",'r',encoding='utf-8')
@@ -39,9 +39,9 @@ try:
         if len(word)<length:
             continue
 
-        # translation = translate_client.translate(word,target_language=language)  
-        # tran = translation['translatedText']
-        tran = translate(word)
+        translation = translate_client.translate(word,target_language=language)  
+        tran = translation['translatedText']
+        # tran = translate(word)
         string = "%-18s%-10s%-7d\t"%(word,tran,d[word])
         # string = "%-20s%-7d\t" %(word,d[word])
         ju += 1
