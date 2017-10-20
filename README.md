@@ -22,7 +22,7 @@ gcloud auth application-default login
 ```
 
 ### 二.使用urllib取googletranslate
-模拟一个头文件，请求到translate.google.com去，然后解析出翻译文本
+模拟一个头部，请求到translate.google.com去，然后解析出翻译文本
 
 ### 运行方式
 把将要统计的文本放入Input.txt文件中，直接运行
